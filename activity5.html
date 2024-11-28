@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santi coding</title>
+    
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: black;
+    background-color: white;
+}
+.box {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 100px;
+}
+.boxone {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+input[type="number"] {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+button:hover {
+    background-color: grey;
+}
+
+.darkmode {
+    background-color: #1a1a1a;
+    color: white;
+}
+.darkmode .box {
+    background-color: #333;
+    border-color: #444;
+    color: white;
+}
+    </style>
+   
+</head>
+<body>
+    <div class="box">
+        <div class="boxone">
+            <label for="numone">First number:</label>
+            <input type="number" id="numone" placeholder="Enter first number">
+        </div>
+        
+        <div class="boxone">
+            <label for="numtwo">Second number:</label>
+            <input type="number" id="numtwo" placeholder="Enter second number">
+        </div>
+        
+        <button onclick="add()">Add</button>
+        
+        <p>Sum: <span id="result"></span></p>
+        
+        <button onclick="botton()">Dark Mode</button>
+    </div>
+
+    <script>
+        function add() {
+            const number1 = parseFloat(document.getElementById("numone").value);
+            const number2 = parseFloat(document.getElementById("numtwo").value);
+            document.getElementById("result").textContent = number1 + number2;
+        }
+
+        function botton() {
+            document.body.classList.toggle("darkmode");
+        }
+    </script>
+</body>
+</html>
